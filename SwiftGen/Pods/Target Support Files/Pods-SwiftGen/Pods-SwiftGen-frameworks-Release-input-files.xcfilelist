@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-SwiftGen/Pods-SwiftGen-frameworks.sh
+${BUILT_PRODUCTS_DIR}/PathKit/PathKit.framework
+${BUILT_PRODUCTS_DIR}/Stencil/Stencil.framework

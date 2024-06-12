@@ -1,0 +1,90 @@
+## Bước 1: Tạo file pod và ta thêm pod 'SwiftGen', chạy pod install
+## Bước 2: Mở terminal của project và chạy lệnh swiftgen config init, sau đó ta sẽ thêm file swiftgen vào project
+## Bước 3: Ta thêm 1 run script vào project, sau đó ta đổi tên runscrip thành swiftgen cho dễ phân biệt và thêm lệnh sau
+# if [[ -f "${PODS_ROOT}/SwiftGen/bin/swiftgen" ]]; then
+#   "${PODS_ROOT}/SwiftGen/bin/swiftgen"
+# else
+#   echo "warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it."
+# fi
+## Bước 4: Ta cấu hình file swiftgen
+# Ở đây ta có thể cấu hình liên quan tới String, Asset, Font, Color, JSON, Storyboard,... Ta dùng cái gì thì cấu hình cái đó. Dưới đây là ví dụ cấu hình cho String, Asset, Font
+## Sau khi cấu hình xong ta Run Project sẽ tạo ra các file SwiftGen đã cấu hình, và ta sẽ thêm vào project, có thể tạo 1 Folder tên là Generated để chứa các file SwiftGen
+## Cách sử dụng các file SwiftGen đã tạo ra rất đơn giản, đã ví dụ trong ViewController
+
+strings:
+  inputs:
+    # 1
+    - SwiftGen/en.lproj
+  outputs:
+    - templateName: structured-swift5
+      # 2
+      params:
+        publicAccess: true
+        enumName: Strings
+      output: Strings+Generated.swift
+
+##1 Khi bạn chuyển đổi các tệp chuỗi của mình, bạn chỉ nên sử dụng một trong các thư mục được bản địa hóa. Đối với mỗi ngôn ngữ được thêm vào, một thư mục bản địa hóa mới sẽ được tạo. Trong dự án này, bản địa hóa duy nhất là tiếng Anh. Nếu bạn thêm nhiều ngôn ngữ hơn, không cần phải sửa đổi mục nhập này để nhận các bản dịch bổ sung đó. Bởi vì tệp chuỗi phải có một tập hợp các khóa và giá trị phù hợp, bạn sẽ tham chiếu các bản dịch giống như bạn sẽ làm nếu bạn không sử dụng SwiftGen.
+##2 Bạn đã thêm một tham số mới, được đặt tên publicAccess. Nếu bạn nhìn xung quanh bất kỳ tệp nào đã tạo mà bạn đã thêm, bạn sẽ thấy tất cả các loại đều có công cụ sửa đổi quyền truy cập internal. Bằng cách sử dụng tham số này, bạn có thể thay đổi công cụ sửa đổi quyền truy cập của các bảng kê đã tạo thành công khai.
+
+
+## Mỗi loại tệp hoặc mẫu, bạn muốn chuyển đổi bằng SwiftGen yêu cầu một mục nhập ở cấp gốc là swiftgen.yml . Ở đây, điều này cho biết bạn muốn SwiftGen chuyển đổi các tệp là XCAsset . Ở đây, bạn chỉ cần chuyển đổi tệp Assets.xcassets . Điều này sẽ tạo ra một tệp XCAssets+Generated.swift trong thư mục đầu ra của bạn.
+# 1
+xcassets:
+  # 2
+  inputs:
+    - SwiftGen/Assets.xcassets
+    - SwiftGen/ColorDarkmode.xcassets
+  # 3
+  outputs:
+    # 4
+    templatePath: templateXcassets.stencil
+    # 6
+    params:
+       # 7
+       forceProvidesNamespaces: true
+       # 8
+       forceFileNameEnum: true
+       enumName: Images
+    # 5
+    output: XCAssets+Generated.swift
+
+##1 Mỗi loại tệp hoặc mẫu, bạn muốn chuyển đổi bằng SwiftGen yêu cầu một mục nhập ở cấp gốc là swiftgen.yml . Ở đây, điều này cho biết bạn muốn SwiftGen chuyển đổi các tệp là XCAsset .
+##2 Danh sách này cho biết những tệp SwiftGen nên giới hạn chuyển đổi của nó.
+##3 Bạn cần cho SwiftGen biết cách tạo đầu ra.
+##4 Bạn phải cung cấp tên mẫu. Ở đây, swift5 là một mẫu mặc định được cung cấp bởi nhóm SwiftGen. Bạn sẽ học cách sử dụng các mẫu của riêng mình sau này.
+##5 Cuối cùng, bạn cung cấp tên tệp mà bạn muốn mã Swift mới của mình tạo ra. Hãy nhớ rằng, bạn đã xác định output_dir ở đầu tệp, có nghĩa là nó sẽ xuất thành Generated / XCAssets + Generated.swift .
+##6 Xác định params trên outputs của bạn.
+##7 forceProvidesNamespaces: Điều này sẽ duy trì không gian tên của bạn được tìm thấy trong danh mục nội dung.
+##8 Tham số bổ sung này đảm bảo cho dù bạn đã cung cấp bao nhiêu tên tệp inputs, SwiftGen sẽ duy trì các bảng liệt kê riêng biệt để đại diện cho từng danh mục nội dung.
+
+## Fonts
+fonts:
+  inputs:
+    - SwiftGen/Fonts
+  outputs:
+    templateName: swift5
+    output: Fonts+Generated.swift
+    
+## Cấu hình Fonts
+
+## Colors
+colors:
+  inputs:
+    - SwiftGen/Generated/Color.txt
+  outputs:
+    templateName: swift5
+    output: Colors+Generated.swift
+
+
+## Templates SwiftGen
+# Bước 1: Kiểm tra các swiftgen có trong terminal: swiftgen template list
+# Bước 2: Xem chi tiết swiftgen đó bằng cách: swiftgen template cat <parser> <templatename>
+# Bước 3: Tạo mẫu swiftgen tùy chỉnh theo chính bạn bằng cách sao chép đoạn mã swiftgen bạn muốn điều chỉnh: swiftgen template cat <parser> <templatename> >templateXcassets.stencil
+# Bước 4: Chỉnh sửa lại file templateXcassets.stencil theo ý muốn của bạn
+# Bước 5: Để sử dụng ta thay đổi templatePath: templateXcassets.stencil trong file swiftgen.yml
+
+#Ở đây tôi muốn điều chỉnh gọi ra ảnh trực tiếp thay vì dùng có sẽ của swiftgen như là Images.Assets.Comment.icBackComment.image
+#Thì trong file templateXcassets.stencil tôi sẽ chỉnh sửa lại như sau:
+#Dòng 107 tôi sẽ thêm .image để khi swiftgen thì sẽ thêm trực tiếp .image vào sau tên ảnh
+
+#stencil là tập tin tài nguyên. Chúng định nghĩa cách mà các thông tin từ tập tài nguyên được chuyển đổi thành mã swift, cho phép bạn tùy chỉnh mã được tạo ra dựa trên nhu cầu cụ thể của dự án của bạn

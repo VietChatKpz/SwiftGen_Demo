@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftGen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtA-gQ-RhS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EMA-RL-3s2">
+                                        <rect key="frame" x="0.0" y="366" width="393" height="393"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EMA-RL-3s2" secondAttribute="height" multiplier="1:1" id="zDj-IM-bKQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vg8-GX-bmP">
+                                        <rect key="frame" x="16" y="16" width="361" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="fue-ej-Gkv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpc-ip-dum">
+                                        <rect key="frame" x="16" y="80" width="361" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="yPf-4M-33T"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGW-1u-JFO">
+                                        <rect key="frame" x="0.0" y="126" width="393" height="240"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="240" id="3m6-6B-rkk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Bpc-ip-dum" firstAttribute="leading" secondItem="gtA-gQ-RhS" secondAttribute="leading" constant="16" id="9CF-qc-4hh"/>
+                                    <constraint firstItem="EMA-RL-3s2" firstAttribute="leading" secondItem="gtA-gQ-RhS" secondAttribute="leading" id="B9z-L3-F28"/>
+                                    <constraint firstItem="RGW-1u-JFO" firstAttribute="leading" secondItem="gtA-gQ-RhS" secondAttribute="leading" id="BhB-9d-7pf"/>
+                                    <constraint firstAttribute="trailing" secondItem="vg8-GX-bmP" secondAttribute="trailing" constant="16" id="Fwz-RJ-cE2"/>
+                                    <constraint firstItem="vg8-GX-bmP" firstAttribute="top" secondItem="gtA-gQ-RhS" secondAttribute="top" constant="16" id="MHr-91-aT6"/>
+                                    <constraint firstItem="EMA-RL-3s2" firstAttribute="top" secondItem="RGW-1u-JFO" secondAttribute="bottom" id="awn-SZ-ejJ"/>
+                                    <constraint firstItem="vg8-GX-bmP" firstAttribute="leading" secondItem="gtA-gQ-RhS" secondAttribute="leading" constant="16" id="fGU-vU-LO3"/>
+                                    <constraint firstAttribute="trailing" secondItem="RGW-1u-JFO" secondAttribute="trailing" id="fKV-f7-Afx"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bpc-ip-dum" secondAttribute="trailing" constant="16" id="iYE-32-NFb"/>
+                                    <constraint firstAttribute="bottom" secondItem="EMA-RL-3s2" secondAttribute="bottom" id="le2-z8-A20"/>
+                                    <constraint firstItem="Bpc-ip-dum" firstAttribute="top" secondItem="vg8-GX-bmP" secondAttribute="bottom" constant="16" id="v4A-Gy-G12"/>
+                                    <constraint firstAttribute="trailing" secondItem="EMA-RL-3s2" secondAttribute="trailing" id="wBD-iT-so2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gtA-gQ-RhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JgW-1Q-bJQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gtA-gQ-RhS" secondAttribute="bottom" id="R0U-Ba-iC1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gtA-gQ-RhS" secondAttribute="trailing" id="ZY9-Vg-oe4"/>
+                            <constraint firstItem="gtA-gQ-RhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rd9-YU-hlc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeView" destination="RGW-1u-JFO" id="77Q-8I-guL"/>
+                        <outlet property="image" destination="EMA-RL-3s2" id="XV2-dR-0SM"/>
+                        <outlet property="imageLabel" destination="Bpc-ip-dum" id="ORC-Of-UnL"/>
+                        <outlet property="nameLabel" destination="vg8-GX-bmP" id="LKp-Y7-WTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

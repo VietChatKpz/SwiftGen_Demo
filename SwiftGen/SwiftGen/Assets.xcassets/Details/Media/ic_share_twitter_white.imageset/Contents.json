@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_share_twitter_white.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
