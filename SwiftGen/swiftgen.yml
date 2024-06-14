@@ -25,7 +25,6 @@ strings:
       # 2
       params:
         publicAccess: true
-        enumName: Strings
       output: Strings+Generated.swift
 
 ##1 Khi bạn chuyển đổi các tệp chuỗi của mình, bạn chỉ nên sử dụng một trong các thư mục được bản địa hóa. Đối với mỗi ngôn ngữ được thêm vào, một thư mục bản địa hóa mới sẽ được tạo. Trong dự án này, bản địa hóa duy nhất là tiếng Anh. Nếu bạn thêm nhiều ngôn ngữ hơn, không cần phải sửa đổi mục nhập này để nhận các bản dịch bổ sung đó. Bởi vì tệp chuỗi phải có một tập hợp các khóa và giá trị phù hợp, bạn sẽ tham chiếu các bản dịch giống như bạn sẽ làm nếu bạn không sử dụng SwiftGen.
@@ -77,7 +76,7 @@ colors:
   inputs:
     - SwiftGen/Generated/Color.txt
   outputs:
-    templateName: swift5
+    templatePath: SwiftGen/Template/templateColor.stencil
     output: Colors+Generated.swift
 
 
@@ -93,3 +92,5 @@ colors:
 #Dòng 107 tôi sẽ thêm .image để khi swiftgen thì sẽ thêm trực tiếp .image vào sau tên ảnh
 
 #stencil là tập tin tài nguyên. Chúng định nghĩa cách mà các thông tin từ tập tài nguyên được chuyển đổi thành mã swift, cho phép bạn tùy chỉnh mã được tạo ra dựa trên nhu cầu cụ thể của dự án của bạn
+
+### Lưu ý: Mỗi lần thay đổi dữ liệu để được cập nhật nhanh nhất trước khi Command + R thì ta sẽ Clean Build trước bằng cách Command + Shift + K

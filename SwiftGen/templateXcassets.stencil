@@ -7,7 +7,7 @@
  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{type}}(named: "{{asset.value}}")
  {% endmacro %}
  {# Khởi tạo extension UIColor cho tất cả các assets trong catalogs #}
- // MARK: - Colors -
+ // MARK: - Colors
 
  {{accessModifier}} extension UIColor {
     {% for catalog in catalogs %}
@@ -28,7 +28,7 @@
  }
 
  {# Khởi tạo extension UIImage cho tất cả các assets trong catalogs #}
- // MARK: - Images -
+ // MARK: - Images
 
  {{accessModifier}} extension UIImage {
       {% for catalog in catalogs %}

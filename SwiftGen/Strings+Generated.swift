@@ -1,63 +1,43 @@
+import UIKit
 
-import Foundation
+//MARK: - String
 
-// MARK: - Strings
-
-// swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
-// swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
-public enum Strings {
-  /// Setting
-  public static let setting = Strings.tr("Localizable", "setting", fallback: "Setting")
-  /// Localizable.strings
-  ///   SwiftGen
-  /// 
-  ///   Created by VietChat on 11/6/24.
-  public static let title = Strings.tr("Localizable", "title", fallback: "JQMF")
-  public enum Constants {
-    public enum UserDefaultKeys {
-      /// struct Constants {
-      ///      struct UserDefaultKeys {
-      ///          static let firebaseID = "FirebaseInstallId"
-      ///          static let isFirstLoginAfterInstall = "isFirstLoginAfterInstall"
-      ///          static let isEnableNotification = "IsEnableNotification"
-      ///          static let isFirstLaunchApp = "isFirstLaunchApp"
-      ///          static let versionApp = "versionApp"
-      ///          static let bookMarkToken = "bookMarkToken"
-      ///          static let loginToken = "loginToken"
-      ///          static let userToken = "userToken"
-      ///      }
-      ///  }
-      public static let firebaseID = Strings.tr("Localizable", "constants.userDefaultKeys.firebaseID", fallback: "FirebaseInstallId")
-      /// isFirstLoginAfterInstall
-      public static let isFirstLoginAfterInstall = Strings.tr("Localizable", "constants.userDefaultKeys.isFirstLoginAfterInstall", fallback: "isFirstLoginAfterInstall")
+public extension String {
+    /// Tên File: constants
+    struct Constants {
+        /// Tên File: userDefaultKeys
+        struct UserDefaultKeys {
+            /// Giá trị: FirebaseInstallId
+            static let firebaseID = localize("constants.userDefaultKeys.firebaseID")
+            /// Giá trị: isFirstLoginAfterInstall
+            static let isFirstLoginAfterInstall = localize("constants.userDefaultKeys.isFirstLoginAfterInstall")
+        }
     }
-  }
-  public enum GlobalData {
-    /// 1038
-    public static let postcastType = Strings.tr("Localizable", "globalData.postcastType", fallback: "1038")
-  }
+    /// Tên File: globalData
+    struct GlobalData {
+        /// Giá trị: 1038
+        static let postcastType = localize("globalData.postcastType")
+    }
+    /// Tên File: viewController
+    struct ViewController {
+        /// Tên File: label
+        struct Label {
+            /// Giá trị: Setting
+            static let setting = localize("viewController.label.setting")
+            /// Giá trị: JQMF
+            static let title = localize("viewController.label.title")
+        }
+    }
 }
-// swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
-// swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
 
-// MARK: - Implementation Details
+//MARK: - Localize
 
-extension Strings {
-  private static func tr(_ table: String, _ key: String, _ args: CVarArg..., fallback value: String) -> String {
-    let format = BundleToken.bundle.localizedString(forKey: key, value: value, table: table)
-    return String(format: format, locale: Locale.current, arguments: args)
-  }
+private extension String {
+    static func localize(_ key: String, _ args: CVarArg...) -> String {
+        return String(
+            format: NSLocalizedString(key, comment: ""),
+            locale: Locale.current,
+            arguments: args
+        )
+    }
 }
-
-// swiftlint:disable convenience_type
-private final class BundleToken {
-  static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
-  }()
-}
-// swiftlint:enable convenience_type
-

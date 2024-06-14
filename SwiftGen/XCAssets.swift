@@ -1,6 +1,6 @@
  import UIKit
 
- // MARK: - Colors -
+ // MARK: - Colors
 
   extension UIColor {
      static let accentColor = UIColor(named: "AccentColor")
@@ -21,7 +21,7 @@
      static let tnMainBlue = UIColor(named: "tnMainBlue")
  }
 
- // MARK: - Images -
+ // MARK: - Images
 
   extension UIImage {
      static let dnGifIcon = UIImage(named: "dn-gif-icon")

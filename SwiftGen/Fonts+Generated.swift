@@ -45,50 +45,50 @@ import UIKit
 // MARK: - Implementation Details
 
  struct FontConvertible {
-   let name: String
-   let family: String
-   let path: String
+     let name: String
+     let family: String
+     let path: String
 
-   typealias Font = UIFont
+     typealias Font = UIFont
 
-   func size(_ size: CGFloat) -> Font {
-    guard let font = Font(font: self, size: size) else {
-      fatalError("Unable to initialize font '\(name)' (\(family))")
+     func size(_ size: CGFloat) -> Font {
+        guard let font = Font(font: self, size: size) else {
+            fatalError("Unable to initialize font '\(name)' (\(family))")
+        }
+        return font
     }
-    return font
-  }
 
-   func register() {
-    guard let url = url else { return }
-    CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
-  }
-
-  fileprivate func registerIfNeeded() {
-    if !UIFont.fontNames(forFamilyName: family).contains(name) {
-      register()
+    fileprivate func register() {
+        guard let url = url else { return }
+        CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
     }
-  }
 
-  fileprivate var url: URL? {
-    return BundleToken.bundle.url(forResource: path, withExtension: nil)
-  }
+    fileprivate func registerIfNeeded() {
+        if !UIFont.fontNames(forFamilyName: family).contains(name) {
+            register()
+        }
+    }
+
+    fileprivate var url: URL? {
+            return BundleToken.bundle.url(forResource: path, withExtension: nil)
+    }
 }
 
- extension FontConvertible.Font {
-  convenience init?(font: FontConvertible, size: CGFloat) {
-    font.registerIfNeeded()
-    self.init(name: font.name, size: size)
-  }
+private extension FontConvertible.Font {
+    convenience init?(font: FontConvertible, size: CGFloat) {
+        font.registerIfNeeded()
+        self.init(name: font.name, size: size)
+    }
 }
 
 
 private final class BundleToken {
-  static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
-  }()
+    static let bundle: Bundle = {
+        #if SWIFT_PACKAGE
+        return Bundle.module
+        #else
+        return Bundle(for: BundleToken.self)
+        #endif
+    }()
 }
 

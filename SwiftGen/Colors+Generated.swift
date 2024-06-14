@@ -1,76 +1,58 @@
-// swiftlint:disable all
-// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
-
-#if os(macOS)
-  import AppKit.NSColor
-  internal typealias Color = NSColor
-#elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  internal typealias Color = UIColor
-#endif
-
-// swiftlint:disable superfluous_disable_command file_length implicit_return
+import UIKit
 
 // MARK: - Colors
 
-// swiftlint:disable identifier_name line_length type_body_length
-internal struct ColorName {
-  internal let rgbaValue: UInt32
-  internal var color: Color { return Color(named: self) }
-
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#339666"></span>
-  /// Alpha: 100% <br/> (0x339666ff)
-  internal static let articleBody = ColorName(rgbaValue: 0x339666ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff66cc"></span>
-  /// Alpha: 100% <br/> (0xff66ccff)
-  internal static let articleFootnote = ColorName(rgbaValue: 0xff66ccff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#33fe66"></span>
-  /// Alpha: 100% <br/> (0x33fe66ff)
-  internal static let articleTitle = ColorName(rgbaValue: 0x33fe66ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff66cc"></span>
-  /// Alpha: 100% <br/> (0xff66ccff)
-  internal static let cyanColor = ColorName(rgbaValue: 0xff66ccff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#161643"></span>
-  /// Alpha: 100% <br/> (0x161643ff)
-  internal static let tim = ColorName(rgbaValue: 0x161643ff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
-  /// Alpha: 80% <br/> (0xffffffcc)
-  internal static let translucent = ColorName(rgbaValue: 0xffffffcc)
+ extension UIColor {
+    /// Background: #339666
+    /// Alpha: 100% (0x339666ff)
+    static let articleBody = UIColor(rgbaValue: 0x339666ff)
+    /// Background: #ff66cc
+    /// Alpha: 100% (0xff66ccff)
+    static let articleFootnote = UIColor(rgbaValue: 0xff66ccff)
+    /// Background: #33fe66
+    /// Alpha: 100% (0x33fe66ff)
+    static let articleTitle = UIColor(rgbaValue: 0x33fe66ff)
+    /// Background: #ff66cc
+    /// Alpha: 100% (0xff66ccff)
+    static let cyanColor = UIColor(rgbaValue: 0xff66ccff)
+    /// Background: #161643
+    /// Alpha: 100% (0x161643ff)
+    static let tim = UIColor(rgbaValue: 0x161643ff)
+    /// Background: #ffffff
+    /// Alpha: 80% (0xffffffcc)
+    static let translucent = UIColor(rgbaValue: 0xffffffcc)
 }
-// swiftlint:enable identifier_name line_length type_body_length
 
 // MARK: - Implementation Details
 
-internal extension Color {
-  convenience init(rgbaValue: UInt32) {
-    let components = RGBAComponents(rgbaValue: rgbaValue).normalized
-    self.init(red: components[0], green: components[1], blue: components[2], alpha: components[3])
-  }
+private extension UIColor {
+    convenience init(rgbaValue: UInt32) {
+        let components = RGBAComponents(rgbaValue: rgbaValue).normalized
+        self.init(red: components[0], green: components[1], blue: components[2], alpha: components[3])
+    }
 }
 
 private struct RGBAComponents {
-  let rgbaValue: UInt32
+    let rgbaValue: UInt32
 
-  private var shifts: [UInt32] {
-    [
-      rgbaValue >> 24, // red
-      rgbaValue >> 16, // green
-      rgbaValue >> 8,  // blue
-      rgbaValue        // alpha
-    ]
-  }
+    private var shifts: [UInt32] {
+        [
+            rgbaValue >> 24, // red
+            rgbaValue >> 16, // green
+            rgbaValue >> 8,  // blue
+            rgbaValue        // alpha
+        ]
+    }
 
-  private var components: [CGFloat] {
-    shifts.map { CGFloat($0 & 0xff) }
-  }
+    private var components: [CGFloat] {
+        shifts.map { CGFloat($0 & 0xff) }
+    }
 
-  var normalized: [CGFloat] {
-    components.map { $0 / 255.0 }
-  }
+    var normalized: [CGFloat] {
+        components.map { $0 / 255.0 }
+    }
 }
 
-internal extension Color {
-  convenience init(named color: ColorName) {
-    self.init(rgbaValue: color.rgbaValue)
-  }
-}
+
+
+

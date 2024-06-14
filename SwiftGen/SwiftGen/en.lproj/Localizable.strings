@@ -5,9 +5,16 @@
   Created by VietChat on 11/6/24.
   
 */
-//MARk: Bắt buộc kết thúc câu phải có dấu ;
-"title" = "JQMF";
-"setting" = "Setting";
+//MARK: - Bắt buộc kết thúc câu phải có dấu ;
+
+//MARK: - Quy chuẩn đặt tên
+// "TenFile_TenBien" = "Giá Trị";
+// "TenFile_NutAction_TenBien" = "Giá Trị";
+
+//MARK: Theo Màn Hình
+// Ví dụ
+"viewController.label.title" = "JQMF";
+"viewController.label.setting" = "Setting";
 
 //Thay vì bạn tạo 1 struct khai báo biến như sau
 /*
@@ -24,8 +31,10 @@
      }
  }
  */
-
+//MARK: Theo file
 // Ta thể cấu hình như sau
 "constants.userDefaultKeys.firebaseID" = "FirebaseInstallId";
 "constants.userDefaultKeys.isFirstLoginAfterInstall" = "isFirstLoginAfterInstall";
 "globalData.postcastType" = "1038";
+
+

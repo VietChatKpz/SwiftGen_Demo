@@ -16,9 +16,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        nameLabel.text = Strings.title
-        imageLabel.text = Strings.setting
+        nameLabel.text = .ViewController.Label.title
+        imageLabel.text = .GlobalData.postcastType
         //Lấy phông chữ thay vì là UIFont(name: "", size: 13.0) mà là FontFamily.SFProDisplay.regular.font(size: 36)
         //Ta cũng không cần phải khai bao 1 struct tên phông chữ như là
         /*
@@ -29,6 +28,7 @@ class ViewController: UIViewController {
              ...
          }
          */
+        homeView.backgroundColor = .tim
         nameLabel.font = .notoSerifBold.size(36)
         imageLabel.font = .merriweatherLightItalic.size(22)
         //Lấy tên ảnh trong Asset
