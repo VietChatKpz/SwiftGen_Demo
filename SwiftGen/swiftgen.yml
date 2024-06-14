@@ -11,12 +11,17 @@
 ## Sau khi cấu hình xong ta Run Project sẽ tạo ra các file SwiftGen đã cấu hình, và ta sẽ thêm vào project, có thể tạo 1 Folder tên là Generated để chứa các file SwiftGen
 ## Cách sử dụng các file SwiftGen đã tạo ra rất đơn giản, đã ví dụ trong ViewController
 
+### Lưu ý
+#Cần đặt Generate Asset Symbols là NO
+#Generate Swift Asset Symbols Extension là NO
+#Trong Build Settings
+
 strings:
   inputs:
     # 1
     - SwiftGen/en.lproj
   outputs:
-    - templateName: structured-swift5
+    - templatePath: SwiftGen/Template/templateStrings.stencil
       # 2
       params:
         publicAccess: true
@@ -44,9 +49,9 @@ xcassets:
        forceProvidesNamespaces: true
        # 8
        forceFileNameEnum: true
-       enumName: Images
+       publicAccess: true
     # 5
-    output: XCAssets+Generated.swift
+    output: XCAssets.swift
 
 ##1 Mỗi loại tệp hoặc mẫu, bạn muốn chuyển đổi bằng SwiftGen yêu cầu một mục nhập ở cấp gốc là swiftgen.yml . Ở đây, điều này cho biết bạn muốn SwiftGen chuyển đổi các tệp là XCAsset .
 ##2 Danh sách này cho biết những tệp SwiftGen nên giới hạn chuyển đổi của nó.
@@ -62,7 +67,7 @@ fonts:
   inputs:
     - SwiftGen/Fonts
   outputs:
-    templateName: swift5
+    templatePath: SwiftGen/Template/templateFont.stencil
     output: Fonts+Generated.swift
     
 ## Cấu hình Fonts

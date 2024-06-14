@@ -6,7 +6,7 @@
   
 */
 //MARk: Bắt buộc kết thúc câu phải có dấu ;
-"title" = "Home";
+"title" = "JQMF";
 "setting" = "Setting";
 
 //Thay vì bạn tạo 1 struct khai báo biến như sau

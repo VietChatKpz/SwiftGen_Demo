@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         
         
         nameLabel.text = Strings.title
+        imageLabel.text = Strings.setting
         //Lấy phông chữ thay vì là UIFont(name: "", size: 13.0) mà là FontFamily.SFProDisplay.regular.font(size: 36)
         //Ta cũng không cần phải khai bao 1 struct tên phông chữ như là
         /*
@@ -28,13 +29,11 @@ class ViewController: UIViewController {
              ...
          }
          */
-        nameLabel.font = FontFamily.SFProDisplay.regular.font(size: 36)
+        nameLabel.font = .notoSerifBold.size(36)
+        imageLabel.font = .merriweatherLightItalic.size(22)
         //Lấy tên ảnh trong Asset
 //        imageLabel.text = Images.Assets.Details.dnGifSmallIcon.name
         //Thay vì gọi UIImage(named: "") thay vào đó là Images.Assets.Details.dnGifSmallIcon.image
-//        image.image = Images.Assets.Details.dnGifSmallIcon.image
-//        image.image = Images.Assets.Comment.icBackComment.uiImage
-        image.image = Images.Assets.Comment.icBackComment
-//        homeView.backgroundColor = ColorName.tim
+        image.image = .actions
     }
 }

@@ -1,9 +1,5 @@
-// swiftlint:disable all
-// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 import Foundation
-
-// swiftlint:disable superfluous_disable_command file_length implicit_return prefer_self_in_static_references
 
 // MARK: - Strings
 
@@ -16,7 +12,7 @@ public enum Strings {
   ///   SwiftGen
   /// 
   ///   Created by VietChat on 11/6/24.
-  public static let title = Strings.tr("Localizable", "title", fallback: "Home")
+  public static let title = Strings.tr("Localizable", "title", fallback: "JQMF")
   public enum Constants {
     public enum UserDefaultKeys {
       /// struct Constants {
@@ -64,3 +60,4 @@ private final class BundleToken {
   }()
 }
 // swiftlint:enable convenience_type
+

@@ -1,0 +1,81 @@
+import UIKit
+{% if families %}
+{% set fontType %}{{param.fontTypeName|default:"FontConvertible"}}{% endset %}
+
+// MARK: - Fonts
+
+{% macro transformPath path %}
+  {%- if param.preservePath -%}
+    {{path}}
+  {%- else -%}
+    {{path|basename}}
+  {%- endif -%}
+{% endmacro %}
+{{accessModifier}} extension UIFont {
+    {% for family in families %}
+        {% for font in family.fonts %}
+    {{accessModifier}} static let {{font.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{fontType}}(name: "{{font.name}}", family: "{{family.name}}", path: "{% call transformPath font.path %}")
+        {% endfor %}
+    {% endfor %}
+}
+
+// MARK: - Implementation Details
+
+{{accessModifier}} struct {{fontType}} {
+  {{accessModifier}} let name: String
+  {{accessModifier}} let family: String
+  {{accessModifier}} let path: String
+
+  {{accessModifier}} typealias Font = UIFont
+
+  {{accessModifier}} func size(_ size: CGFloat) -> Font {
+    guard let font = Font(font: self, size: size) else {
+      fatalError("Unable to initialize font '\(name)' (\(family))")
+    }
+    return font
+  }
+
+  {{accessModifier}} func register() {
+    guard let url = url else { return }
+    CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
+  }
+
+  fileprivate func registerIfNeeded() {
+    if !UIFont.fontNames(forFamilyName: family).contains(name) {
+      register()
+    }
+  }
+
+  fileprivate var url: URL? {
+    {% if param.lookupFunction %}
+    return {{param.lookupFunction}}(name, family, path)
+    {% else %}
+    return {{param.bundle|default:"BundleToken.bundle"}}.url(forResource: path, withExtension: nil)
+    {% endif %}
+  }
+  
+}
+
+{{accessModifier}} extension {{fontType}}.Font {
+  convenience init?(font: {{fontType}}, size: CGFloat) {
+    font.registerIfNeeded()
+    self.init(name: font.name, size: size)
+  }
+}
+
+{% if not param.bundle and not param.lookupFunction %}
+
+private final class BundleToken {
+  static let bundle: Bundle = {
+    #if SWIFT_PACKAGE
+    return Bundle.module
+    #else
+    return Bundle(for: BundleToken.self)
+    #endif
+  }()
+}
+{% endif %}
+{% else %}
+// No fonts found
+{% endif %}
+
