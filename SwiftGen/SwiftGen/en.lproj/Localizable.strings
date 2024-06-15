@@ -36,5 +36,7 @@
 "constants.userDefaultKeys.firebaseID" = "FirebaseInstallId";
 "constants.userDefaultKeys.isFirstLoginAfterInstall" = "isFirstLoginAfterInstall";
 "globalData.postcastType" = "1038";
+"home.headerLabel" = "hello";
+
 
 

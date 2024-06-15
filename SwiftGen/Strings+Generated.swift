@@ -18,6 +18,11 @@ public extension String {
         /// Giá trị: 1038
         static let postcastType = localize("globalData.postcastType")
     }
+    /// Tên File: home
+    struct Home {
+        /// Giá trị: hello
+        static let headerLabel = localize("home.headerLabel")
+    }
     /// Tên File: viewController
     struct ViewController {
         /// Tên File: label
