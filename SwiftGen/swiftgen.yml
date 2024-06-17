@@ -21,11 +21,11 @@ strings:
     # 1
     - SwiftGen/en.lproj
   outputs:
-    - templatePath: SwiftGen/Template/templateStrings.stencil
+    - templatePath: SwiftGen_Template/Strings.stencil
       # 2
       params:
         publicAccess: true
-      output: Strings+Generated.swift
+      output: SwiftGen/SwiftGen/Strings.swift
 
 ##1 Khi bạn chuyển đổi các tệp chuỗi của mình, bạn chỉ nên sử dụng một trong các thư mục được bản địa hóa. Đối với mỗi ngôn ngữ được thêm vào, một thư mục bản địa hóa mới sẽ được tạo. Trong dự án này, bản địa hóa duy nhất là tiếng Anh. Nếu bạn thêm nhiều ngôn ngữ hơn, không cần phải sửa đổi mục nhập này để nhận các bản dịch bổ sung đó. Bởi vì tệp chuỗi phải có một tập hợp các khóa và giá trị phù hợp, bạn sẽ tham chiếu các bản dịch giống như bạn sẽ làm nếu bạn không sử dụng SwiftGen.
 ##2 Bạn đã thêm một tham số mới, được đặt tên publicAccess. Nếu bạn nhìn xung quanh bất kỳ tệp nào đã tạo mà bạn đã thêm, bạn sẽ thấy tất cả các loại đều có công cụ sửa đổi quyền truy cập internal. Bằng cách sử dụng tham số này, bạn có thể thay đổi công cụ sửa đổi quyền truy cập của các bảng kê đã tạo thành công khai.
@@ -41,7 +41,7 @@ xcassets:
   # 3
   outputs:
     # 4
-    templatePath: templateXcassets.stencil
+    templatePath: SwiftGen_Template/Xcassets.stencil
     # 6
     params:
        # 7
@@ -50,7 +50,7 @@ xcassets:
        forceFileNameEnum: true
        publicAccess: true
     # 5
-    output: XCAssets.swift
+    output: SwiftGen/SwiftGen/Xcassets.swift
 
 ##1 Mỗi loại tệp hoặc mẫu, bạn muốn chuyển đổi bằng SwiftGen yêu cầu một mục nhập ở cấp gốc là swiftgen.yml . Ở đây, điều này cho biết bạn muốn SwiftGen chuyển đổi các tệp là XCAsset .
 ##2 Danh sách này cho biết những tệp SwiftGen nên giới hạn chuyển đổi của nó.
@@ -66,18 +66,18 @@ fonts:
   inputs:
     - SwiftGen/Fonts
   outputs:
-    templatePath: SwiftGen/Template/templateFont.stencil
-    output: Fonts+Generated.swift
+    templatePath: SwiftGen_Template/Fonts.stencil
+    output: SwiftGen/SwiftGen/Fonts.swift
     
 ## Cấu hình Fonts
 
 ## Colors
 colors:
   inputs:
-    - SwiftGen/Generated/Color.txt
+    - SwiftGen/Color.txt
   outputs:
-    templatePath: SwiftGen/Template/templateColor.stencil
-    output: Colors+Generated.swift
+    templatePath: SwiftGen_Template/Colors.stencil
+    output: SwiftGen/SwiftGen/Colors.swift
 
 
 ## Templates SwiftGen

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         //Lấy tên ảnh trong Asset
 //        imageLabel.text = Images.Assets.Details.dnGifSmallIcon.name
         //Thay vì gọi UIImage(named: "") thay vào đó là Images.Assets.Details.dnGifSmallIcon.image
-        image.image = .icAvatarDefault
+        image.image = .icBrightness
         
     }
 }

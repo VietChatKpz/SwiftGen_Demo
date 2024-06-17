@@ -13,12 +13,7 @@
 		B324485A2C17E65F00B9DFDC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B32448592C17E65F00B9DFDC /* Base */; };
 		B324485C2C17E66000B9DFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B324485B2C17E66000B9DFDC /* Assets.xcassets */; };
 		B324485F2C17E66000B9DFDC /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B324485E2C17E66000B9DFDC /* Base */; };
-		B32448672C17E6E300B9DFDC /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = B32448662C17E6E300B9DFDC /* swiftgen.yml */; };
 		B32448702C17EE2E00B9DFDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B324486E2C17EE2E00B9DFDC /* Localizable.strings */; };
-		B32448722C17EE5E00B9DFDC /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32448712C17EE5E00B9DFDC /* Strings+Generated.swift */; };
-		B32449412C17F5DA00B9DFDC /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32449402C17F5DA00B9DFDC /* Fonts+Generated.swift */; };
-		B3BE70D62C1AD44D005C254A /* XCAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BE70D52C1AD44D005C254A /* XCAssets.swift */; };
-		B3BE70D82C1AF78C005C254A /* templateFont.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70D72C1AF78C005C254A /* templateFont.stencil */; };
 		B3BE71022C1BD2E7005C254A /* NotoSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70D92C1BD2E6005C254A /* NotoSerif-Bold.ttf */; };
 		B3BE71032C1BD2E7005C254A /* NotoSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70DA2C1BD2E6005C254A /* NotoSerif-Regular.ttf */; };
 		B3BE71042C1BD2E7005C254A /* NotoSerif-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70DB2C1BD2E6005C254A /* NotoSerif-SemiBold.ttf */; };
@@ -56,12 +51,12 @@
 		B3BE71242C1BD2E7005C254A /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70FE2C1BD2E6005C254A /* SanFranciscoText-RegularItalic.otf */; };
 		B3BE71252C1BD2E7005C254A /* SanFranciscoText-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE70FF2C1BD2E6005C254A /* SanFranciscoText-SemiBold.otf */; };
 		B3BE71262C1BD2E7005C254A /* SanFranciscoText-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3BE71002C1BD2E6005C254A /* SanFranciscoText-SemiBoldItalic.otf */; };
-		B3BE71282C1BE433005C254A /* templateStrings.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B3BE71272C1BE433005C254A /* templateStrings.stencil */; };
-		B3F1BB7A2C198C2800D072E1 /* templateXcassets.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B3F1BB792C198C2800D072E1 /* templateXcassets.stencil */; };
+		B3D16CFD2C20307E0048AFB4 /* Color.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3D16CFC2C20307E0048AFB4 /* Color.txt */; };
+		B3D16D032C2030860048AFB4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D16CFE2C2030860048AFB4 /* Colors.swift */; };
+		B3D16D042C2030860048AFB4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D16CFF2C2030860048AFB4 /* Fonts.swift */; };
+		B3D16D052C2030860048AFB4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D16D002C2030860048AFB4 /* Strings.swift */; };
+		B3D16D062C2030860048AFB4 /* Xcassets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D16D012C2030860048AFB4 /* Xcassets.swift */; };
 		B3F1BB7C2C19944500D072E1 /* ColorDarkmode.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F1BB7B2C19944500D072E1 /* ColorDarkmode.xcassets */; };
-		B3F1BB7E2C19977B00D072E1 /* Color.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3F1BB7D2C19977B00D072E1 /* Color.txt */; };
-		B3F1BB802C19981F00D072E1 /* Colors+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F1BB7F2C19981F00D072E1 /* Colors+Generated.swift */; };
-		B3F1BB842C199C1B00D072E1 /* templateColor.stencil in Resources */ = {isa = PBXBuildFile; fileRef = B3F1BB832C199C1B00D072E1 /* templateColor.stencil */; };
 		F24E60EFFB9785D69E80A9EF /* Pods_SwiftGen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18E059D4633E4DED46ED008 /* Pods_SwiftGen.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,12 +72,7 @@
 		B324485B2C17E66000B9DFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B324485E2C17E66000B9DFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B32448602C17E66000B9DFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B32448662C17E6E300B9DFDC /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		B324486F2C17EE2E00B9DFDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B32448712C17EE5E00B9DFDC /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = SOURCE_ROOT; };
-		B32449402C17F5DA00B9DFDC /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = SOURCE_ROOT; };
-		B3BE70D52C1AD44D005C254A /* XCAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCAssets.swift; sourceTree = SOURCE_ROOT; };
-		B3BE70D72C1AF78C005C254A /* templateFont.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = templateFont.stencil; sourceTree = "<group>"; };
 		B3BE70D92C1BD2E6005C254A /* NotoSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Bold.ttf"; sourceTree = "<group>"; };
 		B3BE70DA2C1BD2E6005C254A /* NotoSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-Regular.ttf"; sourceTree = "<group>"; };
 		B3BE70DB2C1BD2E6005C254A /* NotoSerif-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerif-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -120,12 +110,12 @@
 		B3BE70FE2C1BD2E6005C254A /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
 		B3BE70FF2C1BD2E6005C254A /* SanFranciscoText-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiBold.otf"; sourceTree = "<group>"; };
 		B3BE71002C1BD2E6005C254A /* SanFranciscoText-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiBoldItalic.otf"; sourceTree = "<group>"; };
-		B3BE71272C1BE433005C254A /* templateStrings.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = templateStrings.stencil; sourceTree = "<group>"; };
-		B3F1BB792C198C2800D072E1 /* templateXcassets.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = templateXcassets.stencil; sourceTree = SOURCE_ROOT; };
+		B3D16CFC2C20307E0048AFB4 /* Color.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Color.txt; sourceTree = "<group>"; };
+		B3D16CFE2C2030860048AFB4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B3D16CFF2C2030860048AFB4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		B3D16D002C2030860048AFB4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		B3D16D012C2030860048AFB4 /* Xcassets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xcassets.swift; sourceTree = "<group>"; };
 		B3F1BB7B2C19944500D072E1 /* ColorDarkmode.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorDarkmode.xcassets; sourceTree = "<group>"; };
-		B3F1BB7D2C19977B00D072E1 /* Color.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Color.txt; sourceTree = "<group>"; };
-		B3F1BB7F2C19981F00D072E1 /* Colors+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Colors+Generated.swift"; sourceTree = SOURCE_ROOT; };
-		B3F1BB832C199C1B00D072E1 /* templateColor.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = templateColor.stencil; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +150,6 @@
 		B32448462C17E65F00B9DFDC = {
 			isa = PBXGroup;
 			children = (
-				B32448662C17E6E300B9DFDC /* swiftgen.yml */,
 				B32448512C17E65F00B9DFDC /* SwiftGen */,
 				B32448502C17E65F00B9DFDC /* Products */,
 				75C516B67FC0EF6C0B23BC22 /* Pods */,
@@ -179,12 +168,12 @@
 		B32448512C17E65F00B9DFDC /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				B32448A92C17EFBA00B9DFDC /* Fonts */,
-				B3F1BB702C19492600D072E1 /* Template */,
-				B32448692C17EB2700B9DFDC /* Generated */,
 				B32448522C17E65F00B9DFDC /* AppDelegate.swift */,
 				B32448542C17E65F00B9DFDC /* SceneDelegate.swift */,
 				B32448562C17E65F00B9DFDC /* ViewController.swift */,
+				B3D16D022C2030860048AFB4 /* SwiftGen */,
+				B32448A92C17EFBA00B9DFDC /* Fonts */,
+				B3D16CFC2C20307E0048AFB4 /* Color.txt */,
 				B324486E2C17EE2E00B9DFDC /* Localizable.strings */,
 				B32448582C17E65F00B9DFDC /* Main.storyboard */,
 				B324485B2C17E66000B9DFDC /* Assets.xcassets */,
@@ -193,18 +182,6 @@
 				B3F1BB7B2C19944500D072E1 /* ColorDarkmode.xcassets */,
 			);
 			path = SwiftGen;
-			sourceTree = "<group>";
-		};
-		B32448692C17EB2700B9DFDC /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				B3BE70D52C1AD44D005C254A /* XCAssets.swift */,
-				B3F1BB7D2C19977B00D072E1 /* Color.txt */,
-				B32449402C17F5DA00B9DFDC /* Fonts+Generated.swift */,
-				B32448712C17EE5E00B9DFDC /* Strings+Generated.swift */,
-				B3F1BB7F2C19981F00D072E1 /* Colors+Generated.swift */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		B32448A92C17EFBA00B9DFDC /* Fonts */ = {
@@ -283,15 +260,15 @@
 			path = "SanFranciscoFont-master";
 			sourceTree = "<group>";
 		};
-		B3F1BB702C19492600D072E1 /* Template */ = {
+		B3D16D022C2030860048AFB4 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				B3BE71272C1BE433005C254A /* templateStrings.stencil */,
-				B3BE70D72C1AF78C005C254A /* templateFont.stencil */,
-				B3F1BB832C199C1B00D072E1 /* templateColor.stencil */,
-				B3F1BB792C198C2800D072E1 /* templateXcassets.stencil */,
+				B3D16CFE2C2030860048AFB4 /* Colors.swift */,
+				B3D16CFF2C2030860048AFB4 /* Fonts.swift */,
+				B3D16D002C2030860048AFB4 /* Strings.swift */,
+				B3D16D012C2030860048AFB4 /* Xcassets.swift */,
 			);
-			path = Template;
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +344,6 @@
 				B32448702C17EE2E00B9DFDC /* Localizable.strings in Resources */,
 				B3BE711B2C1BD2E7005C254A /* SanFranciscoText-Bold.otf in Resources */,
 				B3BE71262C1BD2E7005C254A /* SanFranciscoText-SemiBoldItalic.otf in Resources */,
-				B3BE71282C1BE433005C254A /* templateStrings.stencil in Resources */,
 				B3BE71222C1BD2E7005C254A /* SanFranciscoText-MediumItalic.otf in Resources */,
 				B3BE71042C1BD2E7005C254A /* NotoSerif-SemiBold.ttf in Resources */,
 				B3BE71252C1BD2E7005C254A /* SanFranciscoText-SemiBold.otf in Resources */,
@@ -381,24 +357,20 @@
 				B3BE71152C1BD2E7005C254A /* SanFranciscoDisplay-Light.otf in Resources */,
 				B3BE71052C1BD2E7005C254A /* Merriweather-Black.ttf in Resources */,
 				B3BE71162C1BD2E7005C254A /* SanFranciscoDisplay-Medium.otf in Resources */,
-				B3BE70D82C1AF78C005C254A /* templateFont.stencil in Resources */,
 				B324485A2C17E65F00B9DFDC /* Base in Resources */,
 				B3BE71062C1BD2E7005C254A /* Merriweather-BlackItalic.ttf in Resources */,
 				B3BE71192C1BD2E7005C254A /* SanFranciscoDisplay-Thin.otf in Resources */,
 				B3BE710C2C1BD2E7005C254A /* Merriweather-Regular.ttf in Resources */,
 				B3BE710B2C1BD2E7005C254A /* Merriweather-LightItalic.ttf in Resources */,
 				B3BE710D2C1BD2E7005C254A /* SF-Pro-Display-Bold.otf in Resources */,
-				B3F1BB7E2C19977B00D072E1 /* Color.txt in Resources */,
 				B3BE711E2C1BD2E7005C254A /* SanFranciscoText-HeavyItalic.otf in Resources */,
 				B3BE71082C1BD2E7005C254A /* Merriweather-BoldItalic.ttf in Resources */,
-				B3F1BB7A2C198C2800D072E1 /* templateXcassets.stencil in Resources */,
-				B3F1BB842C199C1B00D072E1 /* templateColor.stencil in Resources */,
 				B3BE71092C1BD2E7005C254A /* Merriweather-Italic.ttf in Resources */,
 				B3BE71132C1BD2E7005C254A /* SanFranciscoDisplay-Bold.otf in Resources */,
+				B3D16CFD2C20307E0048AFB4 /* Color.txt in Resources */,
 				B3BE711D2C1BD2E7005C254A /* SanFranciscoText-Heavy.otf in Resources */,
 				B3BE71232C1BD2E7005C254A /* SanFranciscoText-Regular.otf in Resources */,
 				B3BE711A2C1BD2E7005C254A /* SanFranciscoDisplay-Ultralight.otf in Resources */,
-				B32448672C17E6E300B9DFDC /* swiftgen.yml in Resources */,
 				B3BE710F2C1BD2E7005C254A /* SF-Pro-Display-Regular.otf in Resources */,
 				B3BE71102C1BD2E7005C254A /* SF-Pro-Display-SemiBold.otf in Resources */,
 				B3BE71202C1BD2E7005C254A /* SanFranciscoText-LightItalic.otf in Resources */,
@@ -455,13 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32449412C17F5DA00B9DFDC /* Fonts+Generated.swift in Sources */,
-				B32448722C17EE5E00B9DFDC /* Strings+Generated.swift in Sources */,
 				B32448572C17E65F00B9DFDC /* ViewController.swift in Sources */,
+				B3D16D042C2030860048AFB4 /* Fonts.swift in Sources */,
+				B3D16D032C2030860048AFB4 /* Colors.swift in Sources */,
 				B32448532C17E65F00B9DFDC /* AppDelegate.swift in Sources */,
+				B3D16D052C2030860048AFB4 /* Strings.swift in Sources */,
 				B32448552C17E65F00B9DFDC /* SceneDelegate.swift in Sources */,
-				B3BE70D62C1AD44D005C254A /* XCAssets.swift in Sources */,
-				B3F1BB802C19981F00D072E1 /* Colors+Generated.swift in Sources */,
+				B3D16D062C2030860048AFB4 /* Xcassets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
